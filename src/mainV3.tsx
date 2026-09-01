@@ -1,0 +1,1 @@
+import React from'react';import{createRoot}from'react-dom/client';import{AppV3}from'./AppV3';import'./styles.css';import'./v3.css';createRoot(document.getElementById('root')!).render(<React.StrictMode><AppV3/></React.StrictMode>);if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'));
