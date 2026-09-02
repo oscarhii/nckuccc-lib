@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS admins(email TEXT PRIMARY KEY,role TEXT NOT NULL DEFAULT 'admin',password_hash TEXT NOT NULL,salt TEXT NOT NULL,must_change INTEGER NOT NULL DEFAULT 1,active INTEGER NOT NULL DEFAULT 1,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS admin_reset_requests(id TEXT PRIMARY KEY,email TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'pending',created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,resolved_at TEXT);
+CREATE INDEX IF NOT EXISTS idx_admin_reset_status ON admin_reset_requests(status,created_at);
