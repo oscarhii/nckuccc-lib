@@ -1,1 +1,19 @@
-{"name":"ncku-ccc-library","main":"worker/index.ts","compatibility_date":"2026-08-01","assets":{"directory":"./dist","binding":"ASSETS","not_found_handling":"single-page-application","run_worker_first":["/api/*"]},"d1_databases":[{"binding":"DB","database_name":"ncku-ccc-library","database_id":"REPLACE_WITH_D1_DATABASE_ID"}],"r2_buckets":[{"binding":"COVERS","bucket_name":"ncku-ccc-book-covers"}],"vars":{"ADMIN_TOKEN":"CHANGE_ME_BEFORE_DEPLOY"},"triggers":{"crons":["0 1 * * *"]}}
+{
+  "name": "ncku-ccc-library",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "ncku-ccc-library",
+    "database_id": "949c5505-34c7-4512-a690-1eb0165cee29"
+  }],
+  "r2_buckets": [{"binding":"COVERS","bucket_name":"ncku-ccc-book-covers"}],
+  "triggers": {"crons":["0 1 * * *"]}
+}
